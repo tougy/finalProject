@@ -10,8 +10,11 @@ angular.module("yapp", ["ui.router", "snap", "ngAnimate"])
          .state("overview", { url: "/overview", parent: "dashboard", templateUrl: "views/dashboard/overview.html" })
          .state("reports", { url: "/reports", parent: "dashboard", templateUrl: "views/dashboard/reports.html" }) 
         }]), 
-angular.module("yapp").controller("LoginCtrl", ["$scope", "$location", 
+angular.module("yapp").controller("LoginCtrl", ["$scope", "$rootScope", "$location", 
         function (r, t) { 
-            r.submit = function () { return t.path("/dashboard"), !1 } }]), 
+            r.submit = function ($scope,$rootScope) { 
+                $rootScope.userName = $scope.username;
+                $rootScope.passWord = $scope.password;
+                return t.path("/dashboard"), !1 } }]), 
 angular.module("yapp").controller("DashboardCtrl", ["$scope", "$state", 
         function (r, t) { r.$state = t }]);
