@@ -9,7 +9,6 @@
  */
 angular.module('yapp')
   .controller('LoginCtrl', function($scope, $location, $rootScope) {
-
     $scope.submit = function() {
       if(LoginService.login($scope.username, $scope.password)) {
         $rootScope.userName = $scope.username;
