@@ -1,4 +1,4 @@
-var myApp  =  angular.module('myApp', []);
+/* var myApp  =  angular.module('myApp', []);
 
 myApp.controller('jsonCtrl', function($scope, $http, $rootScope){
 	$http.get('employees.json').success(function (data){
@@ -18,4 +18,4 @@ myApp.controller('jsonCtrl', function($scope, $http, $rootScope){
         return $scope.empName.split("").reverse().join("");
     }
     
-});
+}); */

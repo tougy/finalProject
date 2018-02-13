@@ -1,7 +1,7 @@
 //app.js
 // (function() {
     var app = angular.module('myApp', ['ui.router']);
-    
+
      app.run(function($rootScope, $location, $state, LoginService) {
        console.clear();
        console.log('running');
