@@ -18,6 +18,10 @@
           templateUrl : 'login.html',
           controller : 'LoginController'
         })
+        .state('register', {
+          controller: 'RegisterController',
+          templateUrl: 'register/register.view.html'
+        })
         .state('home', {
           url : '/home',
           templateUrl : 'home.html',

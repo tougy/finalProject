@@ -1,10 +1,16 @@
 //loginController-js 
 var app = angular.module('myApp');
-app.controller('LoginController', function($scope, $rootScope, $stateParams, $state, LoginService) {
+app.controller('LoginController', function($scope, $rootScope, $http, $stateParams, $state, LoginService) {
    $rootScope.title = "AngularJS Login Sample";
    
+   $http.get('employees.json').success(function (data){
+          $scope.employees = data;
+          $rootScope.users = data;
+    });
+  
+ 
    $scope.formSubmit = function() {
-     if(LoginService.login($scope.username, $scope.password)) {
+     if(LoginService.login($scope.username, $scope.password, $scope.employees)) {
        $rootScope.userName = $scope.username;
        $scope.error = '';
        $scope.username = '';
