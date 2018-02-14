@@ -20,14 +20,19 @@
         })
         .state('register', {
           controller: 'RegisterController',
-          templateUrl: 'register/register.view.html'
+          templateUrl: 'register.html'
         })
         .state('home', {
           url : '/home',
           templateUrl : 'home.html',
           controller : 'HomeController'
         }),
-      $urlRouterProvider.otherwise('/login')
+      $urlRouterProvider
+/*       .when('/register', {
+        controller: 'RegisterController',
+        templateUrl: 'register/register.view.html'
+        }) */
+      .otherwise('/login')
     }]);
    
   // })();
