@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1 ,
+		"name": "admin",
+        "pass": "password",
+        "roles": "['Admin']",
+        "state": "open"
+    },
+    {
+        "id": 2 ,
+		"name": "david",
+        "pass": "2gy",
+        "roles": "['User']",
+        "state": "open"
+    },
+    {
+		"id": 3 ,
+		"name": "baruch",
+        "pass": "Baruch",
+        "roles": "['User']",
+        "state": "open"
+	}
+]

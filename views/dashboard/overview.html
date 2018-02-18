@@ -8,11 +8,17 @@
                 <li ng-class="{active: $state.includes('overview')}">
                     <a ui-sref=overview>HOME</a>
                 </li> 
-                <li ng-class="{active: $state.includes('reports')}">
-                    <a ui-sref=reports>REPORTS</a>
+                <li ng-class="{active: $state.includes('DirectoryList')}">
+                    <a ui-sref=DirectoryList>DirectoryList</a>
+                </li> 
+                <li ng-class="{active: $state.includes('FilesList')}">
+                        <a ui-sref=FilesList>FilesList</a>
+                    </li> 
+                    <li>
+                    <a ui-sref=logout>LOGOUT</a>
                 </li> 
                 <li>
-                    <a ui-sref=login>LOGOUT</a>
+                    <a href=http://strapui.com>MORE PREMIUM THEMES</a>
                 </li> 
             </ul> 
         </div> 
@@ -26,20 +32,17 @@
             </span> 
         </a> 
         <div class=fr> 
-            <h2>Overview <small>This site attend to save files on the cloud.
-                
+            <h2> Hello {{$rootscope.username}} <small>This site attend to save files on the cloud.
+    
             </small>
             </h2> 
         </div> 
         <div class=jumbotron> 
             <div class=container> 
-                <h1>Welcome {{userName}} !</h1>
-                 I don't want to bloat this Versatile Theme Free Edition AngularJS Admin theme with a lot of plugins. To install plugins we have bower. Let's keep it real clean!
-                 <br>
-                 <br> 
-                 <p> 
-                     <a ui-sref=login class="btn btn-primary btn-lg btn-white">Logout</a> 
-                </p> 
+                <a href="#" onclick="doSomething();">Click Me!</a>
+                
+                <br><br> 
+                 <p> <a ui-sref=logout class="btn btn-primary btn-lg btn-white">Logout</a> </p> 
             </div> 
         </div> 
     </snap-content> 
