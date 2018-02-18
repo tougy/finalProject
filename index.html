@@ -6,11 +6,23 @@
             <meta name=description> 
             <meta name=viewport content="width=device-width">  
             <link rel=stylesheet href=styles/vendor.css> 
-            <link rel=stylesheet href=styles/main.css> 
+            <link rel=stylesheet href=styles/main.css>
+            <link rel="stylesheet" href="basic/css/style.css" />
+            <link rel="stylesheet" href="basic/css/app.css" type="text/css" />
+            <link rel="shortcut icon" href="basic/images/icons/favicon.png" />
       </head> 
+      <script type="text/javascript" src="src/jquery.min.js"> </script>
+      <script type="text/javascript">
+      function doSomething() {
+            $.get("PHP/dir.php");
+      return false;
+      }
+      </script>
       <body ng-app=yapp> <!--[if lt IE 7]>
  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
  <![endif]-->  
+ <a href="https://github.com/tougy" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
       <div> 
        <div ui-view>
 
@@ -28,12 +40,13 @@
 <!--[if lt IE 9]>
  <script src="scripts/oldieshim.js"></script>
 <![endif]--> 
-<script src=scripts/vendor.js></script> 
-<script src=scripts/scripts.js></script>
- <!--    <script src="Angular/modules/app.js"></script>
-    <script src="Angular/services/loginService.js"></script>
-    <script src="Angular/controllers/login.js"></script>
-    <script src="Angular/controllers/dashboard.js"></script>
- -->
-      </body> 
+      <script src=scripts/vendor.js></script> 
+      <script src=Angular/modules/app.js></script> 
+      <script src=Angular/services/authorization.js></script> 
+      <script src=Angular/services/loginService.js></script> 
+      <script src=Angular/controllers/dashboard.js></script> 
+      <script src=Angular/controllers/logout.js></script> 
+      <script src=Angular/controllers/login.js></script> 
+<!-- <script src=scripts/scripts.js></script>  -->
+</body> 
 </html> 

@@ -1,0 +1,47 @@
+<a href="https://github.com/tougy" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<header>
+  <hgroup>
+    <h2><a href="https://github.com/ebidel/idb.filesystem.js" target="_blank">idb.filesystem.js</a></h2>
+    <h3><a href="http://dev.w3.org/2009/dap/file-system/file-dir-sys.html" target="_blank">HTML5 Filesystem API</a> polyfill that runs on <a href="https://developer.mozilla.org/en/IndexedDB" target="_blank">IndexedDB</a></h3>
+  </hgroup>
+  <button id="openFSButton" onclick="openFS();">Open</button>
+  <button onclick="clearFS();">Remove all</button>
+  <button onclick="getAllEntries(cwd);">Refresh</button>
+  <span>
+    <input type="text" placeholder="Folder name"><button onclick="mkdir(this.previousSibling);" class="inner">Create</button>
+  </span>
+  <span>
+    <input type="text" placeholder="File name"><button onclick="create(this.previousSibling);" class="inner">New</button>
+  </span>
+</header>
+<p>Tip: add files by dragging them in from your desktop.</p>
+<div class="panel">
+  <section>
+    <div id="entries"></div>
+  </section>
+  <section>
+    <ul id="entries2"></ul>
+  </section>
+</div>
+<section class="panel">
+  <div id="log"></div>
+</section>
+<section id="preview">
+</section>
+
+<script src="AngularJs/logger.js" defer></script>
+<script src="AngularJs/dnd.js" defer></script>
+<script src="AngularJs/fsServices.js" defer></script>
+<script src="src/idb.filesystem.js" defer></script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-22014378-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
